@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>3d</title>
+  <style type="text/css">
+     #div{
+     	-webkit-perspective:800;
+     	-webkit-perspective-origin:50% 50%;
+     }
+     #div2{
+     	width: 300px;
+     	height: 300px;
+     	margin: 10px auto;
+     	background: red;
+     	-webkit-transform-style:preserve-3d;
+     	
+     }
+  </style>
+</head>
+<body>
+ <div id="div">
+   <div id="div2"></div>
+ </div>
+ <div>
+   <p>rotate x:<span id="degx-span">0</span>deg</p>
+   <input type="range" min="-360" max="360" id="rotateX" value="0" class="range-control" onchange="rotate()" />
+   <p>rotate y:<span id="degy-span">0</span>deg</p>
+   <input type="range" min="-360" max="360" id="rotateY" value="0" class="range-control" onchange="rotate()" />
+   <p>rotate z:<span id="degz-span">0</span>deg</p>
+   <input type="range" min="-360" max="360" id="rotateZ" value="0" class="range-control" onchange="rotate()" />
+ </div>
+ <script type="text/javascript">
+   function rotate(){
+   	var x=document.getElementById("rotateX").value;
+   	var y=document.getElementById("rotateY").value;
+   	var z=document.getElementById("rotateZ").value;
+   	
+   	document.getElementById("div2").style.webkitTransform="rotateX("+x+"deg) rotateY("+y+"deg) rotateZ("+z+"deg)";
+   	document.getElementById("degx-span").innerText=x;
+   	document.getElementById("degy-span").innerText=y;
+   	document.getElementById("degz-span").innerText=z;
+   }
+ </script>
+</body>
+</html>
