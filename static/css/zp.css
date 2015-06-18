@@ -57,7 +57,7 @@ html,body{height:100%;}
 	height: 300px;
 	position: relative;
 }
- .land {
+.landscape {
 	background:#050000;
 	width: 100%;
 	height: 100%;
@@ -68,7 +68,170 @@ html,body{height:100%;}
 	display: none;
 	color: white;
 } 
-.land p{font-size: 30px;width: 100%;position: absolute;}
+.landscape .iphone {
+	background:url("../images/h5/zp/iphone.png") no-repeat;
+	width:73px;
+	height:109px;
+	position:absolute;
+	left:50%;
+	top:50%;
+	margin-top:-54px;
+	margin-left:-36px;
+	background-size:73px 109px;
+	animation:zhuan 1.5s;
+	-moz-animation:zhuan 1.5s;
+	-webkit-animation:zhuan 1.5s;
+	-o-animation:zhuan 1.5s;
+	-webkit-animation-iteration-count:infinite;
+	-webkit-animation-delay:0.3s;
+}
+.landscape .iphone_text {
+	width:173px;
+	height:29px;
+	text-align:center;
+	position:absolute;
+	left:50%;
+	top:50%;
+	margin-top:71px;
+	margin-left:-86px;
+	color:#fff;
+}
+@-webkit-keyframes zhuan {
+	0% {
+	transform:rotate(0deg);
+	-ms-transform:rotate(0deg);
+	-moz-transform:rotate(0deg);
+	-webkit-transform:rotate(0deg);
+	-o-transform:rotate(0deg)
+	}
+	50% {
+	transform:rotate(-90deg);
+	-ms-transform:rotate(-90deg);
+	-moz-transform:rotate(-90deg);
+	-webkit-transform:rotate(-90deg);
+	-o-transform:rotate(-90deg)
+	}
+	100% {
+	transform:rotate(0deg);
+	-ms-transform:rotate(0deg);
+	-moz-transform:rotate(0deg);
+	-webkit-transform:rotate(0deg);
+	-o-transform:rotate(0deg)
+	}
+}
+@-moz-keyframes zhuan {
+	0% {
+	transform:rotate(0deg);
+	-ms-transform:rotate(0deg);
+	-moz-transform:rotate(0deg);
+	-webkit-transform:rotate(0deg);
+	-o-transform:rotate(0deg)
+	}
+	50% {
+	transform:rotate(-90deg);
+	-ms-transform:rotate(-90deg);
+	-moz-transform:rotate(-90deg);
+	-webkit-transform:rotate(-90deg);
+	-o-transform:rotate(-90deg)
+	}
+	100% {
+	transform:rotate(0deg);
+	-ms-transform:rotate(0deg);
+	-moz-transform:rotate(0deg);
+	-webkit-transform:rotate(0deg);
+	-o-transform:rotate(0deg)
+	}
+}
+@-ms-keyframes zhuan {
+	0% {
+	transform:rotate(0deg);
+	-ms-transform:rotate(0deg);
+	-moz-transform:rotate(0deg);
+	-webkit-transform:rotate(0deg);
+	-o-transform:rotate(0deg)
+	}
+	50% {
+	transform:rotate(-90deg);
+	-ms-transform:rotate(-90deg);
+	-moz-transform:rotate(-90deg);
+	-webkit-transform:rotate(-90deg);
+	-o-transform:rotate(-90deg)
+	}
+	100% {
+	transform:rotate(0deg);
+	-ms-transform:rotate(0deg);
+	-moz-transform:rotate(0deg);
+	-webkit-transform:rotate(0deg);
+	-o-transform:rotate(0deg)
+	}
+}
+@keyframes zhuan {
+	0% {
+	transform:rotate(0deg);
+	-ms-transform:rotate(0deg);
+	-moz-transform:rotate(0deg);
+	-webkit-transform:rotate(0deg);
+	-o-transform:rotate(0deg)
+	}
+	50% {
+	transform:rotate(-90deg);
+	-ms-transform:rotate(-90deg);
+	-moz-transform:rotate(-90deg);
+	-webkit-transform:rotate(-90deg);
+	-o-transform:rotate(-90deg)
+	}
+	100% {
+	transform:rotate(0deg);
+	-ms-transform:rotate(0deg);
+	-moz-transform:rotate(0deg);
+	-webkit-transform:rotate(0deg);
+	-o-transform:rotate(0deg)
+	}
+}
+	
+.audio{
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  z-index: 200; 
+  width: 50px;
+  height: 50px; 
+  background: url("../images/h5/zp/music_off.png") center center no-repeat;
+  background-size: 30px 30px;
+}
+.audio.play_yinfu {
+  background: url("../images/h5/zp/music.gif") center center no-repeat; 
+  background-size: 60px 60px;
+}
+.rotate {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  width: 30px;
+  height: 30px;
+  background-size: 100% 100%;
+  background-image: url("../images/h5/zp/music_off.png");
+  -webkit-animation: rotating 1.2s linear infinite;
+  -moz-animation: rotating 1.2s linear infinite;
+  -o-animation: rotating 1.2s linear infinite;
+  animation: rotating 1.2s linear infinite;
+}
+@keyframes rotating{
+  from{transform:rotate(0deg)}
+  to{transform:rotate(360deg)}
+}
+@-webkit-keyframes rotating{
+  from{-webkit-transform:rotate(0deg)}
+  to{-webkit-transform:rotate(360deg)}
+}
+@-moz-keyframes rotating{
+  from{-moz-transform:rotate(0deg)}
+  to{-moz-transform:rotate(360deg)}
+}
+@-o-keyframes rotating{
+  from{-o-transform:rotate(0deg)}
+  to{-o-transform:rotate(360deg)}
+}
 /*第一屏*/
 .logo{
 	background: url("../images/h5/zp/logo.png") no-repeat;
